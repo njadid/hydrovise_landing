@@ -1,225 +1,157 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="utf-8">
-    <title>HydroVisE - Free and Open-Source Software for Hydrologic Data Visualization & Evaluation</title>
-    <meta name="description" content="HydroVisE ">
-    <meta name="author" content="Navid Jadidoleslam">
-    <meta name="keywords"
-          content="HTML, CSS, JavaScript, Iowa Flood Center, HydroVisE, website guide, guide, help, ux, step by step">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="shortcut icon" href="./favicon.png" />
-    <link href='//fonts.googleapis.com/css?family=Raleway:400,300,600' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/skeleton.css">
-    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="css/custom.css">
-
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-    <script src="https://js.stripe.com/v3"></script>
-</head>
-<body class="code-snippets-visible">
-<div class="container">
-    <br>
-    <br>
-    <br>
-    <div style="text-align: center;"><img class="customer_logo" src="images/logo.svg" style="height: 300px;">
-        <br>
-        <br>
-        <h1>HydroVisE</h1></div>
-    <br>
-    <div style="text-align: center;">
-        <a class="button button-primary" href="https://github.com/njadid/hydrovise" target="_blank">Download</a>
-    </div>
-
-    <section class="header" style="margin-top: 10px;">
-        <div class="value-props row">
-            <div class="six columns value-prop">
-                <i class="fa fa-clock-o fa-5x" style="font-size: 7em;"></i><br>
-                <h3><b><a href="#realTimeexamples">Real-Time</a></b></h3>Real-time flood forecasting model comparisons from
-                <a href="https://asynch.readthedocs.io/en/latest/index.html">HLM model</a> and
-                <a href="https://water.noaa.gov/about/nwm">National Water Model</a> over the state of Iowa.
+    <head>
+        <meta charset="utf-8">
+        <title>HydroVisE - Free and Open-Source Software for Hydrologic Data Visualization &Evaluation</title>
+        <meta name="description" content="HydroVisE ">
+        <meta name="author" content="Navid Jadidoleslam">
+        <meta name="keywords" content="HTML, CSS, JavaScript, Iowa Flood Center, HydroVisE, website guide, guide, help, ux, step by step">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="shortcut icon" href="./favicon.png"/>
+        <link href='//fonts.googleapis.com/css?family=Raleway:400,300,600' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="css/skeleton.css">
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="css/custom.css">
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+        <script src="https://js.stripe.com/v3"></script>
+    </head>
+    <body class="code-snippets-visible">
+        <div class="container">
+            <br>
+            <br>
+            <br>
+            <div style="text-align: center;">
+                <img class="customer_logo" src="images/logo.svg" style="height: 300px;">
+                <br>
+                <br>
+                <h1>HydroVisE</h1>
             </div>
-            <div class="six columns value-prop">
+            <br>
+            <div style="text-align: center;">
+                <a class="button button-primary" href="https://github.com/njadid/hydrovise" target="_blank">Download</a>
+            </div>
+            <section class="header" style="margin-top: 10px;">
+                <div class="value-props row">
 
-                <img src="images/projects.png" style="height: 100px;"/>
-                <h3><b><a href="#IFCprojects">Example Projects</a></b></h3>Example use cases of HydroVisE implemented by Iowa Flood Center graduate
+                    <div class="value-prop">
+                        <img src="images/projects.png" style="height: 100px;"/>
+                        <h3>
+                            <b>
+                                <a href="#examples">Example Projects</a>
+                            </b>
+                        </h3>
+                        Example use cases of HydroVisE implemented by Iowa Flood Center graduate
                 students and research scientists
-            </div>
-        </div>
-    </section>
-    <div class="navbar-spacer"></div>
-    <nav class="navbar">
-        <div class="container" style="width: 100%;
+            
+                    </div>
+                </div>
+            </section>
+            <div class="navbar-spacer"></div>
+            <nav class="navbar">
+                <div class="container" style="width: 100%;
         align-self: center;
         position: relative;
         margin-left: 200px;">
-            <ul class="navbar-list">
-                <li class="navbar-item"><a class="navbar-link" href="https://github.com/njadid/HydroVisE/wiki"
-                                           target="_blank"><b>Documentation</b></a></li>
-                <li class="navbar-item"><a class="navbar-link" href="https://github.com/njadid/HydroVisE/archive/master.zip"
-                                           target="_blank"><b>Download</b></a></li>
-                <!--                <li class="navbar-item"><a class="navbar-link" href="javascript:void(0)" onclick="introJs().start()">Demo</a>-->
-                <!--                </li>-->
-                <li class="navbar-item"><a class="navbar-link" href="https://github.com/njadid/HydroVisE"
-                                           target="_blank"><i class="fa fa-github"></i>&nbsp;Github</a></li>
-
-            </ul>
-        </div>
-    </nav>
-    <div class="docs-section" id="intro">
-        <h6 class="docs-header">Why using HydroVisE?</h6>
-        <p>
-            HydroVisE is a client-side web browser-based software for visualization and analysis of environmental data. It
+                    <ul class="navbar-list">
+                        <li class="navbar-item">
+                            <a class="navbar-link" href="https://github.com/njadid/HydroVisE/wiki" target="_blank">
+                                <b>Documentation</b>
+                            </a>
+                        </li>
+                        <li class="navbar-item">
+                            <a class="navbar-link" href="https://github.com/njadid/HydroVisE/archive/master.zip" target="_blank">
+                                <b>Download</b>
+                            </a>
+                        </li>
+                        <!--                <li class="navbar-item"><a class="navbar-link" href="javascript:void(0)" onclick="introJs().start()">Demo</a>-->
+                        <!--                </li>-->
+                        <li class="navbar-item">
+                            <a class="navbar-link" href="https://github.com/njadid/HydroVisE" target="_blank">
+                                <i class="fa fa-github"></i>
+                                &nbsp;Github
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+            <div class="docs-section" id="intro">
+                <h6 class="docs-header">What is HydroVisE?</h6>
+                <p>HydroVisE is a client-side web browser-based software for visualization and analysis of environmental data. It
             is developed to facilitate visualization and basic data evaluations for users with less exposure to web
             programming languages.
 
             HydroVisE is designed to address most common visualizations for environmental data with ability to further
             include more capabilities within its designed framework.
         </p>
-        <p>HydroVisE is open-source and free to use. Share the project with your friends and colleagues.</p>
-        <iframe id="twitter-widget-0" scrolling="no" frameborder="0" allowtransparency="true" allowfullscreen="true"
-                class="twitter-share-button twitter-share-button-rendered twitter-tweet-button"
-                style="position: static; visibility: visible; width: 60px; height: 20px;" title="Twitter Tweet Button"
-                src="https://platform.twitter.com/widgets/tweet_button.4f8aea4342a4ada72cba2bdffcff6b4d.en.html#dnt=false&amp;id=twitter-widget-0&amp;lang=en&amp;original_referer=http://HydroVisE.app&amp;size=m&amp;text=Hydrologic model data visualization and evaluations using HydroVisE.&amp;time=1580493821407&amp;type=share&amp;url=http://HydroVisE.app"
-                data-url="http://HydroVisE.com/"></iframe>
-        <script>!function (d, s, id) {
-            var js, fjs = d.getElementsByTagName(s)[0];
-            if (!d.getElementById(id)) {
-                js = d.createElement(s);
-                js.id = id;
-                js.src = "//platform.twitter.com/widgets.js";
-                fjs.parentNode.insertBefore(js, fjs);
-            }
-        }(document, "script", "twitter-wjs");</script>
-
-        <div id="___plusone_0" style="position: absolute; width: 450px; left: -10000px;">
-            <iframe ng-non-bindable="" frameborder="0" hspace="0" marginheight="0" marginwidth="0" scrolling="no"
-                    style="position:absolute;top:-10000px;width:450px;margin:0px;border-style:none" tabindex="0"
-                    vspace="0" width="100%" id="I0_1580493820856" name="I0_1580493820856"
-                    src="https://apis.google.com/se/0/_/+1/fastbutton?usegapi=1&amp;size=medium&amp;origin=http://HydroVisE.app&amp;url=http://HydroVisE.app&amp;gsrc=3p&amp;ic=1&amp;jsh=m%3B%2F_%2Fscs%2Fapps-static%2F_%2Fjs%2Fk%3Doz.gapi.en_US.sMn3oj1Y3cA.O%2Fam%3DwQc%2Fd%3D1%2Fct%3Dzgms%2Frs%3DAGLTcCN2dfVUHs4zuTf0kWyDefSg5_jNrA%2Fm%3D__features__#_methods=onPlusOne%2C_ready%2C_close%2C_open%2C_resizeMe%2C_renderstart%2Concircled%2Cdrefresh%2Cerefresh%2Conload&amp;id=I0_1580493820856&amp;_gfid=I0_1580493820856&amp;parent=https%3A%2F%2Fintrojs.com&amp;pfname=&amp;rpctoken=17784045"
-                    data-gapiattached="true"></iframe>
-        </div>
-
-        <script type="text/javascript">
-            (function () {
-                var po = document.createElement('script');
-                po.type = 'text/javascript';
-                po.async = true;
-                po.src = 'https://apis.google.com/js/plusone.js';
-                var s = document.getElementsByTagName('script')[0];
-                s.parentNode.insertBefore(po, s);
-            })();
-        </script>
-        <iframe src="//ghbtns.com/github-btn.html?user=njadid&amp;repo=HydroVisE&amp;type=watch&amp;count=true"
-                allowtransparency="true" frameborder="0" scrolling="0" width="110" height="20"></iframe>
-        <iframe src="//ghbtns.com/github-btn.html?user=njadid&amp;repo=HydroVisE&amp;type=fork&amp;count=true"
-                allowtransparency="true" frameborder="0" scrolling="0" width="110" height="20"></iframe>
-    </div>
-
-    <div class="docs-section examples" id="realTimeexamples">
-        <h6 class="docs-header" style="font-size: 3rem">Example Real-Time Projects</h6>
-        <div class="row">
-            <div class="three column">
-                <div class="column">
-                    <h6 class="example-header"><i class="fa fa-info-circle"></i>&nbsp;Issue Time</h6>
-                    <p class="example-description">
-                        National Water Center and Iowa Flood Center flood forecasting model results organized by Issue Time
-                        <br><br>
-                        <a class="button" href="http://visualriver.net/hygis.html?config=/configs/rt_issue_time.json"
-                           target="_blank">Visit</a>
-                    </p>
+                <p>HydroVisE is open-source and free to use. Share the project with your friends and colleagues.</p>
+                <iframe id="twitter-widget-0" scrolling="no" frameborder="0" allowtransparency="true" allowfullscreen="true" class="twitter-share-button twitter-share-button-rendered twitter-tweet-button" style="position: static; visibility: visible; width: 60px; height: 20px;" title="Twitter Tweet Button" src="https://platform.twitter.com/widgets/tweet_button.4f8aea4342a4ada72cba2bdffcff6b4d.en.html#dnt=false&amp;id=twitter-widget-0&amp;lang=en&amp;original_referer=http://hydrovise.com&amp;size=m&amp;text=Hydrologic model data visualization and evaluations using HydroVisE.&amp;time=1580493821407&amp;type=share&amp;url=http://hydrovise.com" data-url="http://hydrovise.com/"></iframe>
+                <script>
+                    !function(d, s, id) {
+                        var js, fjs = d.getElementsByTagName(s)[0];
+                        if (!d.getElementById(id)) {
+                            js = d.createElement(s);
+                            js.id = id;
+                            js.src = "//platform.twitter.com/widgets.js";
+                            fjs.parentNode.insertBefore(js, fjs);
+                        }
+                    }(document, "script", "twitter-wjs");
+                </script>
+                <iframe src="//ghbtns.com/github-btn.html?user=njadid&amp;repo=HydroVisE&amp;type=watch&amp;count=true" allowtransparency="true" frameborder="0" scrolling="0" width="110" height="20"></iframe>
+                <iframe src="//ghbtns.com/github-btn.html?user=njadid&amp;repo=HydroVisE&amp;type=fork&amp;count=true" allowtransparency="true" frameborder="0" scrolling="0" width="110" height="20"></iframe>
+            </div>
+            <div class="docs-section examples" id="examples">
+                <h6 class="docs-header" style="font-size: 3rem">Example Projects</h6>
+                <div class="row">
+                    <div class="three column">
+                        <div class="column">
+                            <h6 class="example-header">
+                                <i class="fa fa-info-circle"></i>
+                                &nbsp;Retrospective - Model predictions using Quantitative Precipitation Estimate (QPE)
+                            </h6>
+                            <p class="example-description">
+                                Retrospective hydrologic model prediction and assessment of National Water Model (WRF-Hydro) and Iowa Flood Center's Hillslope Link Model 
+                                 using multiple rainfall products for the state of Iowa from 2016 to 2018.<br> This HydroVisE instance includes model evaluations 
+                                 by various statistical measures. <br>
+                                <br>
+                                <a class="button" href="http://visualriver.net:8080/?config=/configs/retro.json" target="_blank">Visit</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="three column">
+                        <div class="column">
+                            <h6 class="example-header">
+                                <i class="fa fa-info-circle"></i>
+                                &nbsp;Retrospective - Model predictions using QPE including precipitation timeseries
+                            </h6>
+                            <p class="example-description">
+                                Retrospective hydrologic model prediction and assessment of National Water Model (WRF-Hydro) and Iowa Flood Center's Hillslope Link Model 
+                                 using multiple rainfall products for the state of Iowa from 2016 to 2018. 
+                                 <br>This instance of HydroVisE includes both evaluation metrics and basin-averaged precipitation time-series and its percentage coverage.<br>
+                                <br>
+                                <a class="button" href="http://visualriver.net:8080/?config=/configs/retro_force.json" target="_blank">Visit</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="three column">
+                        <div class="column">
+                            <h6 class="example-header">
+                                <i class="fa fa-info-circle"></i>
+                                &nbsp;Real-time and historical USGS Streamflow data Browser 
+                            </h6>
+                            <p class="example-description">
+                                Browse real-time and historical USGS streamflow data for the state of Iowa starting from 1980.<br>
+                                <br>
+                                <a class="button" href="http://visualriver.net:8080/?config=/configs/rt_usgs.json" target="_blank">Visit</a>
+                            </p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-        <hline></hline>
-        <div class="row">
-            <div class="three column">
-                <div class="column">
-                    <h6 class="example-header"><i class="fa fa-info-circle"></i>&nbsp;Lead Time - Up to 18 hours</h6>
-                    <p class="example-description">
-                        National Water Center and Iowa Flood Center flood forecasting model results organized by Lead Time
-                        with 18 hours maximum forecast lead time.<br><br>
-                        <a class="button" href="http://visualriver.net/hygis.html?config=/configs/rt_lead_time.json"
-                           target="_blank">Visit</a>
-                    </p>
-                </div>
-            </div>
-        </div>
-        <hline></hline>
-        <div class="row">
-            <div class="three column">
-                <div class="column">
-                    <h6 class="example-header"><i class="fa fa-info-circle"></i>&nbsp;Lead Time - Up to 5 days</h6>
-                    <p class="example-description">
-                        National Water Center and Iowa Flood Center flood forecasting model results organized by Lead Time
-                        with 240 hours maximum forecast lead time.<br><br>
-                        <a class="button" href="http://visualriver.net/hygis.html?config=/configs/rt_lead_time_240.json"
-                           target="_blank">Visit</a>
-                    </p>
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="three column">
-                <div class="column">
-                    <h6 class="example-header"><i class="fa fa-info-circle"></i>&nbsp;IFC Data Assimilation</h6>
-                    <p class="example-description">
-                        Iowa Flood Center flood forecasting model results after USGS streamflow data assimilation
-                        organized by Issue Time.<br><br>
-                        <a class="button" href="http://visualriver.net/hygis.html?config=/configs/rt_lead_time_240.json"
-                           target="_blank">Visit</a>
-                    </p>
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="three column">
-                <div class="column">
-                    <h6 class="example-header"><i class="fa fa-info-circle"></i>&nbsp;Real-time and hsitorical USGS Streamflow data Browser </h6>
-                    <p class="example-description">
-                        Browse real-time and historical USGS streamflow data for the state of Iowa starting from 1980.<br><br>
-                        <a class="button" href="http://visualriver.net/hygis.html?config=/configs/rt_lead_time_240.json"
-                           target="_blank">Visit</a>
-                    </p>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="docs-section examples" id="IFCprojects">
-        <h6 class="docs-header"  style="font-size: 3rem">Other Example Implementations</h6>
-        <p><h7>Example implementations at the Iowa Flood Center (IFC) using HydroVisE</h7></p>
-
-        <div class="row">
-            <div class="three column">
-                <div class="column">
-                    <h6 class="example-header"><i class="fa fa-info-circle"></i> Sensor and Satellite-based Soil Moisture Visualization</h6>
-                    <p class="example-description">
-                        Multi product soil moisture comparisons including SMAP (Soil Moisture Active Passive), SMOS
-                        (Soil Moisture Ocean Salinity), hydrologic model predictions, and field sensor soil moisture data <br><br>
-                        <a class="button" href="http://s-iihr50.iihr.uiowa.edu/hygis-dev/?config=http://s-iihr50.iihr.uiowa.edu/hydro-analytics.net/configs/evapex/config_sm_maps.json"
-                           target="_blank">Visit</a>
-                    </p>
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="three column">
-                <div class="column">
-                    <h6 class="example-header"><i class="fa fa-info-circle"></i> Satellite-based Soil Moisture Assimilation in Hydrologic Model</h6>
-                    <p class="example-description">
-                        Streamflow prediction performance comparisons for satellite-based soil moisture data assimilation in
-                        a distributed hydrologic model. SMAP (Soil Moisture Active Passive) and SMOS (Soil Moisture Ocean Salinity)
-                        satellite-based products are assimilated using Ensemble Kalman Filter.
-                        <br><br>
-                        <a class="button" href="http://s-iihr50.iihr.uiowa.edu/hydro-analytics.net/hygis.html?config=configs/smap/config.json"
-                           target="_blank">Visit</a>
-                    </p>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-</body>
+    </body>
 </html>
