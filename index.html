@@ -29,7 +29,7 @@
             </div>
             <br>
             <div style="text-align: center;">
-                <a class="button button-primary" href="https://github.com/njadid/hydrovise" target="_blank">Download</a>
+                <a class="button button-primary" href="https://github.com/hydrovise/hydrovise" target="_blank">Download</a>
             </div>
             <section class="header" style="margin-top: 10px;">
                 <div class="value-props row">
@@ -55,19 +55,17 @@
         margin-left: 200px;">
                     <ul class="navbar-list">
                         <li class="navbar-item">
-                            <a class="navbar-link" href="https://github.com/njadid/HydroVisE/wiki" target="_blank">
+                            <a class="navbar-link" href="https://github.com/hydrovise/HydroVisE/wiki" target="_blank">
                                 <b>Documentation</b>
                             </a>
                         </li>
                         <li class="navbar-item">
-                            <a class="navbar-link" href="https://github.com/njadid/HydroVisE/archive/master.zip" target="_blank">
+                            <a class="navbar-link" href="https://github.com/hydrovise/HydroVisE/archive/master.zip" target="_blank">
                                 <b>Download</b>
                             </a>
                         </li>
-                        <!--                <li class="navbar-item"><a class="navbar-link" href="javascript:void(0)" onclick="introJs().start()">Demo</a>-->
-                        <!--                </li>-->
                         <li class="navbar-item">
-                            <a class="navbar-link" href="https://github.com/njadid/HydroVisE" target="_blank">
+                            <a class="navbar-link" href="https://github.com/hydrovise/HydroVisE" target="_blank">
                                 <i class="fa fa-github"></i>
                                 &nbsp;Github
                             </a>
@@ -83,7 +81,7 @@
 
             HydroVisE is designed to address most common visualizations for environmental data with ability to further
             include more capabilities within its designed framework.
-        </p>
+                </p>
                 <p>HydroVisE is open-source and free to use. Share the project with your friends and colleagues.</p>
                 <iframe id="twitter-widget-0" scrolling="no" frameborder="0" allowtransparency="true" allowfullscreen="true" class="twitter-share-button twitter-share-button-rendered twitter-tweet-button" style="position: static; visibility: visible; width: 60px; height: 20px;" title="Twitter Tweet Button" src="https://platform.twitter.com/widgets/tweet_button.4f8aea4342a4ada72cba2bdffcff6b4d.en.html#dnt=false&amp;id=twitter-widget-0&amp;lang=en&amp;original_referer=http://hydrovise.com&amp;size=m&amp;text=Hydrologic model data visualization and evaluations using HydroVisE.&amp;time=1580493821407&amp;type=share&amp;url=http://hydrovise.com" data-url="http://hydrovise.com/"></iframe>
                 <script>
@@ -97,24 +95,27 @@
                         }
                     }(document, "script", "twitter-wjs");
                 </script>
-                <iframe src="//ghbtns.com/github-btn.html?user=njadid&amp;repo=HydroVisE&amp;type=watch&amp;count=true" allowtransparency="true" frameborder="0" scrolling="0" width="110" height="20"></iframe>
-                <iframe src="//ghbtns.com/github-btn.html?user=njadid&amp;repo=HydroVisE&amp;type=fork&amp;count=true" allowtransparency="true" frameborder="0" scrolling="0" width="110" height="20"></iframe>
+                <iframe src="//ghbtns.com/github-btn.html?user=hydrovise&amp;repo=HydroVisE&amp;type=watch&amp;count=true" allowtransparency="true" frameborder="0" scrolling="0" width="110" height="20"></iframe>
+                <iframe src="//ghbtns.com/github-btn.html?user=hydrovise&amp;repo=HydroVisE&amp;type=fork&amp;count=true" allowtransparency="true" frameborder="0" scrolling="0" width="110" height="20"></iframe>
             </div>
             <div class="docs-section examples" id="examples">
-                <h6 class="docs-header" style="font-size: 3rem">Example Projects</h6>
+                <h6 class="docs-header" style="font-size: 3rem">Example Use Cases</h6>
                 <div class="row">
                     <div class="three column">
                         <div class="column">
-                            <h6 class="example-header">
+                            <h5 class="example-header">
                                 <i class="fa fa-info-circle"></i>
-                                &nbsp;Retrospective - Model predictions using Quantitative Precipitation Estimate (QPE)
-                            </h6>
+                                &nbsp;Example 1 - Time-series data visualization and evaluation
+                            </h5>
                             <p class="example-description">
-                                Retrospective hydrologic model prediction and assessment of National Water Model (WRF-Hydro) and Iowa Flood Center's Hillslope Link Model 
-                                 using multiple rainfall products for the state of Iowa from 2016 to 2018.<br> This HydroVisE instance includes model evaluations 
-                                 by various statistical measures. <br>
+                                For demonstration, we compare streamflow predictions from the HLM model for two cases.
+                                The first case is referred to as the "open loop" model prediction that does not include any update to model states.
+                                The second case is a model prediction using data assimilation of SMAP satellite-based soil moisture in HLM's top layer.
+                                We use Ensemble Kalman Filter with time-dependent variance for perturbations of initial soil moistures, referred to as "EnKFV".
+                                We show streamflow predictions at the USGS gauge observation locations for the state of Iowa for the year 2015. <br>
+                                This HydroVisE instance includes model evaluations by various statistical measures. <br>
                                 <br>
-                                <a class="button" href="http://visualriver.net:8080/?config=/configs/retro.json" target="_blank">Visit</a>
+                                <a class="button" href="http://hydrovise.com/app/?config=examples/ex1/config.json" target="_blank">Visit</a>
                             </p>
                         </div>
                     </div>
@@ -122,16 +123,51 @@
                 <div class="row">
                     <div class="three column">
                         <div class="column">
+                            <h5 class="example-header">
+                            <h5 class="example-header">
+                                <i class="fa fa-info-circle"></i>
+                                &nbsp;Example 2 - Hydrologic assessment of Quantitative Precipitation Forecast (QPF)
+                            </h5>
+                            <p class="example-description">
+                                We used hourly accumulated MRMS (Multi Radar Multi Sensor) and IFC (Iowa Flood Center) QPE
+                                products for simulating historical streamflow. For streamflow forecasts, we use HRRR
+                                (High-Resolution Rapid Refresh) atmospheric model's QPF. HRRR product is issued every hour with
+                                lead times starting from zero to eighteen hours. Streamflow forecasts from HLM model
+                                are provided for the next five days starting from every precipitation forecast issue time.</p>
                             <h6 class="example-header">
                                 <i class="fa fa-info-circle"></i>
-                                &nbsp;Retrospective - Model predictions using QPE including precipitation timeseries
+                                &nbsp;(a) - Issue Time
                             </h6>
+                            The time-series show streamflow forecasts for the next five days from a selected forecast issue time. <br>
+                                <a class="button" href="http://hydrovise.com/app/?config=examples/ex2/config_issue_time.json" target="_blank">Visit</a>
+
+                            <h6 class="example-header">
+                                <i class="fa fa-info-circle"></i>
+                                &nbsp;(b) - Lead Time
+                            </h6>
+                            The time-series show streamflow forecasts for a selected year, hydrologic model setup, and forecast lead time. <br>
+                            <a class="button" href="http://hydrovise.com/app/?config=examples/ex2/config_lead_time.json" target="_blank">Visit</a>
+                                <br><br>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="three column">
+                        <div class="column">
+                            <h5 class="example-header">
+                                <i class="fa fa-info-circle"></i>
+                                &nbsp;Example 3 - Grid-based hydrometeorological data visualization
+                            </h5>
                             <p class="example-description">
-                                Retrospective hydrologic model prediction and assessment of National Water Model (WRF-Hydro) and Iowa Flood Center's Hillslope Link Model 
-                                 using multiple rainfall products for the state of Iowa from 2016 to 2018. 
-                                 <br>This instance of HydroVisE includes both evaluation metrics and basin-averaged precipitation time-series and its percentage coverage.<br>
+                                Satellite, field-sensor, and hydrologic model soil moisture space-time data visualization.
+                                The data correspond to soil moisture time-series from SMAP, SMOS, collocated field sensor soil moisture data and a hydrologic model storage that is shown by
+                                percentiles within a SMAP pixel.
                                 <br>
-                                <a class="button" href="http://visualriver.net:8080/?config=/configs/retro_force.json" target="_blank">Visit</a>
+                                The maps are provided for SMAP, Model's median value for hillslopes within a SMAP pixel. <br>
+
+                                <a class="button" href="http://hydrovise.com/app/?config=examples/ex3/config.json" target="_blank">Visit</a>
+                                <br>
+                                <br>
                             </p>
                         </div>
                     </div>
@@ -139,19 +175,26 @@
                 <div class="row">
                     <div class="three column">
                         <div class="column">
-                            <h6 class="example-header">
+                            <h5 class="example-header">
                                 <i class="fa fa-info-circle"></i>
-                                &nbsp;Real-time and historical USGS Streamflow data Browser 
-                            </h6>
+                                &nbsp;Example 4 - River network-based data visualizations
+                            </h5>
                             <p class="example-description">
-                                Browse real-time and historical USGS streamflow data for the state of Iowa starting from 1980.<br>
+                                This example shows river network-based visualizations for flood potential during year 2016. Also, the time-series data are available for
+                                each river segments which can be visualized by clicking on any river segment shown on the map.
                                 <br>
-                                <a class="button" href="http://visualriver.net:8080/?config=/configs/rt_usgs.json" target="_blank">Visit</a>
+                                Minified Example<br>
+                                <a class="button" href="http://hydrovise.com/app/?config=examples/ex4_min/config.json" target="_blank">Visit</a>
+                                <br>
+                                Full Example for the state of Iowa<br>
+                                <a class="button" href="http://hydrovise.com/app/?config=examples/ex4/config.json" target="_blank">Visit</a>
+                                <br>
+                                <br>
                             </p>
                         </div>
                     </div>
                 </div>
-            </div>
+
         </div>
     </body>
 </html>
